@@ -17,12 +17,6 @@ jobs:
     steps:
       - checkout
 
-      # Pull last build’s cache (ignore if it does not exist)
-      - run:
-          name: Pre-pull cache image
-          command: |
-            docker pull "docker.io/$DOCKERHUB_USER/comfyui-wan-template:buildcache" || true
-
       - run:
           name: Log in to Docker Hub
           command: |
