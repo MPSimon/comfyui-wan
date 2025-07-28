@@ -322,19 +322,19 @@ SOURCE_DIR="/comfyui-wan/workflows"
 # Ensure destination directory exists
 mkdir -p "$WORKFLOW_DIR"
 
-# Loop over each file in the source directory
-for file in "$SOURCE_DIR"/*; do
-    # Skip if it's not a file
-    [[ -f "$file" ]] || continue
+# Loop over each subdirectory in the source directory
+for dir in "$SOURCE_DIR"/*; do
+    # Skip if it's not a directory
+    [[ -d "$dir" ]] || continue
 
-    dest_file="$WORKFLOW_DIR/$(basename "$file")"
+    dest_dir="$WORKFLOW_DIR/$(basename "$dir")"
 
-    if [[ -e "$dest_file" ]]; then
-        echo "File already exists in destination. Deleting: $file"
-        rm -f "$file"
+    if [[ -e "$dest_dir" ]]; then
+        echo "Directory already exists in destination. Deleting: $dir"
+        rm -rf "$dir"
     else
-        echo "Moving: $file to $WORKFLOW_DIR"
-        mv "$file" "$WORKFLOW_DIR"
+        echo "Moving: $dir to $WORKFLOW_DIR"
+        mv "$dir" "$WORKFLOW_DIR"
     fi
 done
 
