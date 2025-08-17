@@ -234,7 +234,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 26,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -660,7 +660,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -750,7 +750,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -781,86 +781,6 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 336,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        1172.7806396484375,
-        69.80487823486328
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1151
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1152
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "Node name for S&R": "PathchSageAttentionKJ",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "auto"
-      ]
-    },
-    {
-      "id": 337,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        1599.364501953125,
-        67.62909698486328
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1154
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1153
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "Node name for S&R": "PathchSageAttentionKJ",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "auto"
-      ]
     },
     {
       "id": 304,
@@ -1008,8 +928,7 @@
         0,
         "fixed",
         "resample",
-        true,
-        ""
+        true
       ]
     },
     {
@@ -1105,7 +1024,7 @@
       ],
       "size": [
         581.2353515625,
-        671.7896118164062
+        334
       ],
       "flags": {},
       "order": 38,
@@ -1289,45 +1208,8 @@
         200371215504766,
         "randomize",
         "standard",
-        true,
-        ""
+        true
       ]
-    },
-    {
-      "id": 289,
-      "type": "GetNode",
-      "pos": [
-        1217.0357666015625,
-        -143.67352294921875
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1151
-          ]
-        }
-      ],
-      "title": "Get_high_noise_model",
-      "properties": {
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "high_noise_model"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 309,
@@ -1341,7 +1223,7 @@
         206.88636779785156
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1366,7 +1248,7 @@
         154.8159942626953
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1391,7 +1273,7 @@
         120.4779052734375
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1406,42 +1288,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 328,
-      "type": "GetNode",
-      "pos": [
-        1632.2989501953125,
-        -142.04324340820312
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1154
-          ]
-        }
-      ],
-      "title": "Get_low_noise_model",
-      "properties": {
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "low_noise_model"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 293,
       "type": "PrimitiveInt",
       "pos": [
@@ -1453,7 +1299,7 @@
         82
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1492,7 +1338,7 @@
         82
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1530,7 +1376,7 @@
         118.19775390625
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1556,7 +1402,7 @@
         200
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -1644,7 +1490,7 @@
         82
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1682,7 +1528,7 @@
         82
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1720,7 +1566,7 @@
         313.9999694824219
       ],
       "flags": {},
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1760,7 +1606,7 @@
         200
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -1804,7 +1650,7 @@
         210
       ],
       "flags": {},
-      "order": 25,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1889,7 +1735,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1934,6 +1780,162 @@
         3,
         9
       ]
+    },
+    {
+      "id": 336,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1211.7901611328125,
+        122.3169937133789
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1152
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 337,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1637.8592529296875,
+        127.47208404541016
+      ],
+      "size": [
+        271.02423095703125,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1153
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 328,
+      "type": "GetNode",
+      "pos": [
+        1644.6817626953125,
+        70.69503784179688
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1154
+          ]
+        }
+      ],
+      "title": "Get_low_noise_model",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "low_noise_model"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 289,
+      "type": "GetNode",
+      "pos": [
+        1219.3873291015625,
+        69.02178955078125
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1151
+          ]
+        }
+      ],
+      "title": "Get_high_noise_model",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "high_noise_model"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -2680,10 +2682,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 1,
       "offset": [
-        503.0914157854661,
-        248.20063518500226
+        -60.41258421453426,
+        219.19363518500222
       ]
     },
     "groupNodes": {},

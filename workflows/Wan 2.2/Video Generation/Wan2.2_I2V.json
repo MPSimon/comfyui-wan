@@ -1,8 +1,8 @@
 {
   "id": "67b84e8d-f45a-499d-833c-691d67fc4a1b",
   "revision": 0,
-  "last_node_id": 311,
-  "last_link_id": 682,
+  "last_node_id": 313,
+  "last_link_id": 686,
   "nodes": [
     {
       "id": 155,
@@ -233,7 +233,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -326,7 +326,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            591
+            683
           ]
         }
       ],
@@ -362,7 +362,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            592
+            685
           ]
         }
       ],
@@ -390,7 +390,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 34,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -430,13 +430,13 @@
         512.2777099609375
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 591
+          "link": 684
         },
         {
           "name": "positive",
@@ -510,13 +510,13 @@
         512.2777099609375
       ],
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 592
+          "link": 686
         },
         {
           "name": "positive",
@@ -592,7 +592,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -638,7 +638,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -788,7 +788,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -834,7 +834,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -880,7 +880,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -919,7 +919,7 @@
         26
       ],
       "flags": {},
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -960,7 +960,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -999,7 +999,7 @@
         26
       ],
       "flags": {},
-      "order": 35,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1063,7 +1063,7 @@
         82
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 4,
       "inputs": [
         {
@@ -1107,7 +1107,7 @@
         82
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 4,
       "inputs": [
         {
@@ -1151,7 +1151,7 @@
         82
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 4,
       "inputs": [
         {
@@ -1195,7 +1195,7 @@
         82
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 4,
       "inputs": [
         {
@@ -1239,7 +1239,7 @@
         82
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 4,
       "inputs": [
         {
@@ -1283,7 +1283,7 @@
         82
       ],
       "flags": {},
-      "order": 32,
+      "order": 34,
       "mode": 4,
       "inputs": [
         {
@@ -1403,7 +1403,7 @@
         82
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 4,
       "inputs": [
         {
@@ -1447,7 +1447,7 @@
         82
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 4,
       "inputs": [
         {
@@ -1528,10 +1528,10 @@
       ],
       "size": [
         214.7587890625,
-        685.5819091796875
+        334
       ],
       "flags": {},
-      "order": 33,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1679,7 +1679,7 @@
         210
       ],
       "flags": {},
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1747,6 +1747,90 @@
         480,
         81,
         1
+      ]
+    },
+    {
+      "id": 313,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1582.0020751953125,
+        94.212646484375
+      ],
+      "size": [
+        271.2784118652344,
+        58.63920593261719
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 685
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            686
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "2f7300dc546ec2d36fa8b0feebe493d41026524c",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 312,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1161.51953125,
+        95.76288604736328
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 683
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            684
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "2f7300dc546ec2d36fa8b0feebe493d41026524c",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto"
       ]
     }
   ],
@@ -2192,22 +2276,6 @@
       "LATENT"
     ],
     [
-      591,
-      289,
-      0,
-      287,
-      0,
-      "MODEL"
-    ],
-    [
-      592,
-      290,
-      0,
-      286,
-      0,
-      "MODEL"
-    ],
-    [
       597,
       286,
       0,
@@ -2414,6 +2482,38 @@
       310,
       4,
       "IMAGE"
+    ],
+    [
+      683,
+      289,
+      0,
+      312,
+      0,
+      "MODEL"
+    ],
+    [
+      684,
+      312,
+      0,
+      287,
+      0,
+      "MODEL"
+    ],
+    [
+      685,
+      290,
+      0,
+      313,
+      0,
+      "MODEL"
+    ],
+    [
+      686,
+      313,
+      0,
+      286,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -2473,10 +2573,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 1.2100000000000002,
       "offset": [
-        1112.3492452674186,
-        189.41633992099779
+        -101.2826359954949,
+        212.859387473942
       ]
     },
     "groupNodes": {},

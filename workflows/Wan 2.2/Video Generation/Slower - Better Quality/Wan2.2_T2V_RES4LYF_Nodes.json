@@ -903,86 +903,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 336,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        905.2056274414062,
-        78.19903564453125
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1151
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1152
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "Node name for S&R": "PathchSageAttentionKJ",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "auto"
-      ]
-    },
-    {
-      "id": 337,
-      "type": "PathchSageAttentionKJ",
-      "pos": [
-        1331.7894287109375,
-        76.02325439453125
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 25,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1154
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1153
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "Node name for S&R": "PathchSageAttentionKJ",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "auto"
-      ]
-    },
-    {
       "id": 304,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -1128,8 +1048,7 @@
         0,
         "fixed",
         "resample",
-        true,
-        ""
+        true
       ]
     },
     {
@@ -1225,7 +1144,7 @@
       ],
       "size": [
         581.2353515625,
-        671.7896118164062
+        334
       ],
       "flags": {},
       "order": 37,
@@ -1265,8 +1184,8 @@
       "properties": {
         "cnr_id": "comfyui-videohelpersuite",
         "ver": "330bce6c3c0d47ebdedcc0348d9ab355707b7523",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "VHS_VideoCombine"
+        "Node name for S&R": "VHS_VideoCombine",
+        "widget_ue_connectable": {}
       },
       "widgets_values": {
         "frame_rate": 24,
@@ -1494,8 +1413,7 @@
         259747155981550,
         "randomize",
         "standard",
-        true,
-        ""
+        true
       ]
     },
     {
@@ -1559,78 +1477,6 @@
       ]
     },
     {
-      "id": 289,
-      "type": "GetNode",
-      "pos": [
-        923.3307495117188,
-        -147.58338928222656
-      ],
-      "size": [
-        210,
-        60
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1151
-          ]
-        }
-      ],
-      "title": "Get_high_noise_model",
-      "properties": {
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "high_noise_model"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 328,
-      "type": "GetNode",
-      "pos": [
-        1338.5938720703125,
-        -145.95310974121094
-      ],
-      "size": [
-        210,
-        58
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1154
-          ]
-        }
-      ],
-      "title": "Get_low_noise_model",
-      "properties": {
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "low_noise_model"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 339,
       "type": "PrimitiveInt",
       "pos": [
@@ -1642,7 +1488,7 @@
         82
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1658,8 +1504,8 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "PrimitiveInt"
+        "Node name for S&R": "PrimitiveInt",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         9,
@@ -1680,7 +1526,7 @@
         206.88636779785156
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1694,50 +1540,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 303,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -759.1541137695312,
-        203.4401092529297
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 660
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            659
-          ]
-        }
-      ],
-      "title": "LoRA 1",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.46",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "Wan_Breast_Helper_Hearmeman.safetensors",
-        0.7000000000000002
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 340,
       "type": "MarkdownNote",
       "pos": [
@@ -1749,12 +1551,14 @@
         120.4779052734375
       ],
       "flags": {},
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [],
       "title": "Steps Guide",
-      "properties": {},
+      "properties": {
+        "widget_ue_connectable": {}
+      },
       "widgets_values": [
         "## High noise steps should be generally lower than half of the total steps for crisp detail. \n\nFor example, for 24 steps I would use 9 high noise steps"
       ],
@@ -1773,7 +1577,7 @@
         82
       ],
       "flags": {},
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1812,7 +1616,7 @@
         154.8159942626953
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1837,17 +1641,219 @@
         120.4779052734375
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [],
       "title": "RES4LYF Nodes",
-      "properties": {},
+      "properties": {
+        "widget_ue_connectable": {}
+      },
       "widgets_values": [
         "### This workflow uses RES4LYF nodes. \nThese nodes are capable of producing higher quality and more detailed videos at the expense of generation time. \n\nFor faster generations, use the alternative T2V/I2V workflows"
       ],
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 336,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        941.9074096679688,
+        135.59840393066406
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1152
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 289,
+      "type": "GetNode",
+      "pos": [
+        945.26708984375,
+        75.44422149658203
+      ],
+      "size": [
+        210,
+        60.93585968017578
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1151
+          ]
+        }
+      ],
+      "title": "Get_high_noise_model",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "high_noise_model"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 337,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1363.19287109375,
+        135.9088134765625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1153
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 328,
+      "type": "GetNode",
+      "pos": [
+        1374.3792724609375,
+        80.5012435913086
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1154
+          ]
+        }
+      ],
+      "title": "Get_low_noise_model",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "low_noise_model"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 303,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -759.1541137695312,
+        203.4401092529297
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 660
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            659
+          ]
+        }
+      ],
+      "title": "LoRA 1",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Wan_Breast_Helper_Hearmeman.safetensors",
+        0.7000000000000002
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -2556,8 +2562,8 @@
     "ds": {
       "scale": 0.8264462809917358,
       "offset": [
-        1361.5237532340043,
-        322.230442078391
+        2024.291800109005,
+        156.83856707839115
       ]
     },
     "groupNodes": {},

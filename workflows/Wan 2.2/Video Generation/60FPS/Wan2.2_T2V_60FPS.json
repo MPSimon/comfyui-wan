@@ -1,8 +1,8 @@
 {
   "id": "67b84e8d-f45a-499d-833c-691d67fc4a1b",
   "revision": 0,
-  "last_node_id": 309,
-  "last_link_id": 660,
+  "last_node_id": 311,
+  "last_link_id": 664,
   "nodes": [
     {
       "id": 155,
@@ -233,7 +233,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 33,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -281,7 +281,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 44,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -334,7 +334,7 @@
         26
       ],
       "flags": {},
-      "order": 30,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -374,7 +374,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 46,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -437,7 +437,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 41,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -482,7 +482,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -524,7 +524,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 45,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -671,7 +671,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            591
+            661
           ]
         }
       ],
@@ -707,7 +707,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            592
+            663
           ]
         }
       ],
@@ -733,7 +733,7 @@
         334
       ],
       "flags": {},
-      "order": 48,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -814,7 +814,7 @@
         170
       ],
       "flags": {},
-      "order": 47,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -878,7 +878,7 @@
         198
       ],
       "flags": {},
-      "order": 49,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -931,7 +931,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -970,10 +970,10 @@
       ],
       "size": [
         214.7587890625,
-        691.6919555664062
+        334
       ],
       "flags": {},
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1054,13 +1054,13 @@
         850.49658203125
       ],
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 591
+          "link": 662
         },
         {
           "name": "positive",
@@ -1134,13 +1134,13 @@
         850.49658203125
       ],
       "flags": {},
-      "order": 29,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 592
+          "link": 664
         },
         {
           "name": "positive",
@@ -1199,8 +1199,7 @@
         "simple",
         10,
         10000,
-        "disable",
-        ""
+        "disable"
       ]
     },
     {
@@ -1299,7 +1298,7 @@
         334
       ],
       "flags": {},
-      "order": 50,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1422,7 +1421,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1613,7 +1612,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1659,7 +1658,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1705,7 +1704,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 43,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -1744,7 +1743,7 @@
         26
       ],
       "flags": {},
-      "order": 40,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -1766,9 +1765,10 @@
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "ModelPassThrough"
-      }
+        "Node name for S&R": "ModelPassThrough",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
     },
     {
       "id": 284,
@@ -1784,7 +1784,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 42,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -1823,7 +1823,7 @@
         26
       ],
       "flags": {},
-      "order": 39,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -1887,7 +1887,7 @@
         26
       ],
       "flags": {},
-      "order": 22,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1924,7 +1924,7 @@
         26
       ],
       "flags": {},
-      "order": 26,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -1998,7 +1998,7 @@
         82
       ],
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -2042,7 +2042,7 @@
         82
       ],
       "flags": {},
-      "order": 24,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -2064,8 +2064,8 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "LoraLoaderModelOnly"
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "Wan21_CausVid_14B_T2V_lora_rank32.safetensors",
@@ -2086,7 +2086,7 @@
         82
       ],
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 4,
       "inputs": [
         {
@@ -2108,8 +2108,8 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "LoraLoaderModelOnly"
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "Wan21_CausVid_14B_T2V_lora_rank32.safetensors",
@@ -2130,7 +2130,7 @@
         82
       ],
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 4,
       "inputs": [
         {
@@ -2174,7 +2174,7 @@
         82
       ],
       "flags": {},
-      "order": 31,
+      "order": 33,
       "mode": 4,
       "inputs": [
         {
@@ -2218,7 +2218,7 @@
         82
       ],
       "flags": {},
-      "order": 32,
+      "order": 34,
       "mode": 4,
       "inputs": [
         {
@@ -2240,8 +2240,8 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "LoraLoaderModelOnly"
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "Wan21_CausVid_14B_T2V_lora_rank32.safetensors",
@@ -2262,7 +2262,7 @@
         82
       ],
       "flags": {},
-      "order": 34,
+      "order": 36,
       "mode": 4,
       "inputs": [
         {
@@ -2306,7 +2306,7 @@
         82
       ],
       "flags": {},
-      "order": 35,
+      "order": 37,
       "mode": 4,
       "inputs": [
         {
@@ -2328,8 +2328,8 @@
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "LoraLoaderModelOnly"
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "Wan21_CausVid_14B_T2V_lora_rank32.safetensors",
@@ -2354,12 +2354,98 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "properties": {},
+      "properties": {
+        "widget_ue_connectable": {}
+      },
       "widgets_values": [
         "# Left and right LoRA Loaders should be identical\n\n## Each LoRA loader can be enabled/disabled by selecting it and pressing CTRL B"
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 310,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        825.4541625976562,
+        83.912109375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 661
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            662
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "2f7300dc546ec2d36fa8b0feebe493d41026524c",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto"
+      ]
+    },
+    {
+      "id": 311,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        1245.510498046875,
+        89.28337860107422
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 663
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            664
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "2f7300dc546ec2d36fa8b0feebe493d41026524c",
+        "widget_ue_connectable": {},
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto"
+      ]
     }
   ],
   "links": [
@@ -2916,22 +3002,6 @@
       "LATENT"
     ],
     [
-      591,
-      289,
-      0,
-      287,
-      0,
-      "MODEL"
-    ],
-    [
-      592,
-      290,
-      0,
-      286,
-      0,
-      "MODEL"
-    ],
-    [
       597,
       286,
       0,
@@ -3114,6 +3184,38 @@
       303,
       0,
       "MODEL"
+    ],
+    [
+      661,
+      289,
+      0,
+      310,
+      0,
+      "MODEL"
+    ],
+    [
+      662,
+      310,
+      0,
+      287,
+      0,
+      "MODEL"
+    ],
+    [
+      663,
+      290,
+      0,
+      311,
+      0,
+      "MODEL"
+    ],
+    [
+      664,
+      311,
+      0,
+      286,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
@@ -3199,10 +3301,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.751314800901578,
+      "scale": 1.2100000000000002,
       "offset": [
-        2742.6441932531984,
-        67.6802032209681
+        22.806000878457773,
+        183.5336523105858
       ]
     },
     "groupNodes": {},

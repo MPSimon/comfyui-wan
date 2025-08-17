@@ -1522,7 +1522,7 @@
       ],
       "size": [
         214.7587890625,
-        685.5819091796875
+        334
       ],
       "flags": {},
       "order": 34,
@@ -1701,8 +1701,8 @@
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "PathchSageAttentionKJ"
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "auto"
@@ -1743,8 +1743,8 @@
       "properties": {
         "cnr_id": "comfyui-kjnodes",
         "ver": "fbdb08f9d6b0e821919d2c9f9caf8972ed439690",
-        "widget_ue_connectable": {},
-        "Node name for S&R": "PathchSageAttentionKJ"
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "widget_ue_connectable": {}
       },
       "widgets_values": [
         "auto"
@@ -2452,8 +2452,8 @@
     "ds": {
       "scale": 0.6830134553650705,
       "offset": [
-        1604.5736116164505,
-        250.7090793447415
+        1481.8694495070756,
+        293.6769828603664
       ]
     },
     "groupNodes": {},
