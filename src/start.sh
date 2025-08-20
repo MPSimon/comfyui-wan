@@ -423,11 +423,23 @@ done
 # Start ComfyUI
 
 echo "▶️  Starting ComfyUI"
-if [ "$enable_optimizations" = "false" ]; then
-    python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen
-else
+
+# Check if sageattention is installed and available
+if python3 -c "import sageattention" 2>/dev/null; then
+    echo "🔧 SageAttention detected - using optimized mode"
     nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
-    # python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention
+else
+    echo "**************************************************************"
+    echo "⚠️  WARNING: SageAttention not available - using standard mode"
+    echo "🐌 This will result in slower video generation performance"
+    echo ""
+    echo "💡 To fix this issue:"
+    echo "   • Deploy using another GPU (Recommended: H100/H200/5090/PRO 6000)"
+    echo "   • Make sure you select CUDA version 12.8 or 12.9"
+    echo "   • Check the additional filters tab before deploying"
+    echo "**************************************************************"
+    nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
+fi
 
     # Counter for timeout
     counter=0
