@@ -421,16 +421,43 @@ for file in *.zip; do
 done
 
 # Start ComfyUI
+
 echo "▶️  Starting ComfyUI"
 if [ "$enable_optimizations" = "false" ]; then
     python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen
 else
     nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
     # python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention
+
+    # Counter for timeout
+    counter=0
+    max_wait=45
+
     until curl --silent --fail "$URL" --output /dev/null; do
-      echo "🔄  ComfyUI Starting Up... You can view the startup logs here: $NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log"
-      sleep 2
+        if [ $counter -ge $max_wait ]; then
+            echo "⚠️  ComfyUI should be up by now. If it's not running, there's probably an error."
+            echo ""
+            echo "🛠️  Troubleshooting Tips:"
+            echo "1. Make sure that your CUDA Version is set to 12.8/12.9 by selecting that in the additional filters tab before deploying the template"
+            echo "2. If you are deploying using network storage, try deploying without it"
+            echo "3. If you are using a B200 GPU, it is currently not supported"
+            echo "4. If all else fails, open the web terminal by clicking \"connect\", \"enable web terminal\" and running:"
+            echo "   cat comfyui_${RUNPOD_POD_ID}_nohup.log"
+            echo "   This should show a ComfyUI error. Please paste the error in HearmemanAI Discord Server for assistance."
+            echo ""
+            echo "📋 Startup logs location: $NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log"
+            break
+        fi
+
+        echo "🔄  ComfyUI Starting Up... You can view the startup logs here: $NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log"
+        sleep 2
+        counter=$((counter + 2))
     done
-    echo "🚀 ComfyUI is UP"
+
+    # Only show success message if curl succeeded
+    if curl --silent --fail "$URL" --output /dev/null; then
+        echo "🚀 ComfyUI is UP"
+    fi
+
     sleep infinity
 fi
