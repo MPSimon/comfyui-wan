@@ -266,7 +266,15 @@ download_count=0
 # Ensure directories exist and schedule downloads in background
 for TARGET_DIR in "${!MODEL_CATEGORIES[@]}"; do
     mkdir -p "$TARGET_DIR"
-    IFS=',' read -ra MODEL_IDS <<< "${MODEL_CATEGORIES[$TARGET_DIR]}"
+    MODEL_IDS_STRING="${MODEL_CATEGORIES[$TARGET_DIR]}"
+
+    # Skip if the value is the default placeholder
+    if [[ "$MODEL_IDS_STRING" == "replace_with_ids" ]]; then
+        echo "⏭️  Skipping downloads for $TARGET_DIR (default value detected)"
+        continue
+    fi
+
+    IFS=',' read -ra MODEL_IDS <<< "$MODEL_IDS_STRING"
 
     for MODEL_ID in "${MODEL_IDS[@]}"; do
         sleep 1
