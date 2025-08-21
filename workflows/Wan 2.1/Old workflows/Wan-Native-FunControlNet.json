@@ -1,7 +1,7 @@
 {
   "id": "be1c91d9-234f-40a3-bea0-c4fbf4c2ee46",
   "revision": 0,
-  "last_node_id": 371,
+  "last_node_id": 372,
   "last_link_id": 781,
   "nodes": [
     {
@@ -38,10 +38,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
-        "aux_id": "cubiq/ComfyUI_essentials",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -85,12 +85,12 @@
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "cg-use-everywhere",
+        "aux_id": "chrisgoringe/cg-use-everywhere",
         "ver": "8017bc6b063f45db6b986d9fc8bb76bd3234b838",
         "Node name for S&R": "Prompts Everywhere",
         "group_restricted": 0,
         "color_restricted": 0,
-        "aux_id": "chrisgoringe/cg-use-everywhere",
+        "cnr_id": "cg-use-everywhere",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -121,12 +121,12 @@
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "cg-use-everywhere",
+        "aux_id": "chrisgoringe/cg-use-everywhere",
         "ver": "8017bc6b063f45db6b986d9fc8bb76bd3234b838",
         "Node name for S&R": "Anything Everywhere",
         "group_restricted": 0,
         "color_restricted": 0,
-        "aux_id": "chrisgoringe/cg-use-everywhere",
+        "cnr_id": "cg-use-everywhere",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -165,10 +165,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "66493d8cb4209e0ad19c914ae1e39ee7e1486d7e",
         "Node name for S&R": "ImageListToImageBatch",
-        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -208,10 +208,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
-        "aux_id": "cubiq/ComfyUI_essentials",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -254,10 +254,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "79d9aab5e7f53fcbc5df201eff48e6346cc4154e",
         "Node name for S&R": "ModelPassThrough",
-        "aux_id": "kijai/ComfyUI-KJNodes",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -288,12 +288,12 @@
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "cg-use-everywhere",
+        "aux_id": "chrisgoringe/cg-use-everywhere",
         "ver": "8017bc6b063f45db6b986d9fc8bb76bd3234b838",
         "Node name for S&R": "Anything Everywhere",
         "group_restricted": 0,
         "color_restricted": 0,
-        "aux_id": "chrisgoringe/cg-use-everywhere",
+        "cnr_id": "cg-use-everywhere",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -363,12 +363,12 @@
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "cg-use-everywhere",
+        "aux_id": "chrisgoringe/cg-use-everywhere",
         "ver": "8017bc6b063f45db6b986d9fc8bb76bd3234b838",
         "Node name for S&R": "Anything Everywhere",
         "group_restricted": 0,
         "color_restricted": 0,
-        "aux_id": "chrisgoringe/cg-use-everywhere",
+        "cnr_id": "cg-use-everywhere",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -436,12 +436,12 @@
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "cg-use-everywhere",
+        "aux_id": "chrisgoringe/cg-use-everywhere",
         "ver": "8017bc6b063f45db6b986d9fc8bb76bd3234b838",
         "Node name for S&R": "Anything Everywhere",
         "group_restricted": 0,
         "color_restricted": 0,
-        "aux_id": "chrisgoringe/cg-use-everywhere",
+        "cnr_id": "cg-use-everywhere",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -478,10 +478,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "808b0dedf03534a2594ecb60a9d6305a044efdc2",
         "Node name for S&R": "ImageListToImageBatch",
-        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -833,10 +833,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-easy-use",
+        "aux_id": "yolain/ComfyUI-Easy-Use",
         "ver": "f888e3d75dc09c1fc8045bf429e699ed468eda1e",
         "Node name for S&R": "easy cleanGpuUsed",
-        "aux_id": "yolain/ComfyUI-Easy-Use",
+        "cnr_id": "comfyui-easy-use",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -849,8 +849,8 @@
         417.0152893066406
       ],
       "size": [
-        214.7587890625,
-        685.5819091796875
+        219.3603515625,
+        334
       ],
       "flags": {},
       "order": 109,
@@ -888,10 +888,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "8343122234b61a0f8eb3d1f3f98382b0f7aff2b9",
         "Node name for S&R": "VHS_VideoCombine",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -929,8 +929,8 @@
         378.0652770996094
       ],
       "size": [
-        214.7587890625,
-        685.5819091796875
+        219.3603515625,
+        334
       ],
       "flags": {},
       "order": 111,
@@ -968,10 +968,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "8343122234b61a0f8eb3d1f3f98382b0f7aff2b9",
         "Node name for S&R": "VHS_VideoCombine",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -1105,10 +1105,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-frame-interpolation",
+        "aux_id": "Fannovel16/ComfyUI-Frame-Interpolation",
         "ver": "c336f7184cb1ac1243381e725fea1ad2c0a10c09",
         "Node name for S&R": "FILM VFI",
-        "aux_id": "Fannovel16/ComfyUI-Frame-Interpolation",
+        "cnr_id": "comfyui-frame-interpolation",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -1127,8 +1127,8 @@
         378.515625
       ],
       "size": [
-        214.7587890625,
-        459.9862976074219
+        219.3603515625,
+        334
       ],
       "flags": {},
       "order": 113,
@@ -1166,10 +1166,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "8343122234b61a0f8eb3d1f3f98382b0f7aff2b9",
         "Node name for S&R": "VHS_VideoCombine",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -1232,10 +1232,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
         "Node name for S&R": "SkipLayerGuidanceWanVideo",
-        "aux_id": "kijai/ComfyUI-KJNodes",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -1367,10 +1367,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "79d9aab5e7f53fcbc5df201eff48e6346cc4154e",
         "Node name for S&R": "ModelPassThrough",
-        "aux_id": "kijai/ComfyUI-KJNodes",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -1556,9 +1556,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "0b1ac0f1c5a395e17065821e4fd47aba3bf23900",
         "Node name for S&R": "ImageListToImageBatch",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -1596,9 +1597,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -1743,9 +1745,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
         "Node name for S&R": "ImageResizeKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {
           "height": true,
           "width": true
@@ -1939,10 +1942,10 @@
       ],
       "title": "height",
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "SimpleMath+",
-        "aux_id": "cubiq/ComfyUI_essentials",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -2002,10 +2005,10 @@
       ],
       "title": "width",
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "SimpleMath+",
-        "aux_id": "cubiq/ComfyUI_essentials",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -2096,10 +2099,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "GetImageSize+",
-        "aux_id": "cubiq/ComfyUI_essentials",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -2363,9 +2366,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "0b1ac0f1c5a395e17065821e4fd47aba3bf23900",
         "Node name for S&R": "ImageListToImageBatch",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -2403,9 +2407,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -2422,7 +2427,7 @@
       ],
       "size": [
         220.04296875,
-        694.7411499023438
+        334
       ],
       "flags": {},
       "order": 76,
@@ -2461,9 +2466,10 @@
       ],
       "title": "ControlNet Video Preview",
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "972c87da577b47211c4e9aeed30dc38c7bae607f",
         "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -2525,9 +2531,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "0b1ac0f1c5a395e17065821e4fd47aba3bf23900",
         "Node name for S&R": "ImageListToImageBatch",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -2565,9 +2572,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -2608,8 +2616,8 @@
         380.30535888671875
       ],
       "size": [
-        214.7587890625,
-        685.5819091796875
+        219.3603515625,
+        334
       ],
       "flags": {},
       "order": 102,
@@ -2647,10 +2655,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "8343122234b61a0f8eb3d1f3f98382b0f7aff2b9",
         "Node name for S&R": "VHS_VideoCombine",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -2714,10 +2722,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
         "Node name for S&R": "ImagePass",
-        "aux_id": "kijai/ComfyUI-KJNodes",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -3058,9 +3066,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-impact-pack",
+        "aux_id": "ltdrdata/ComfyUI-Impact-Pack",
         "ver": "0b1ac0f1c5a395e17065821e4fd47aba3bf23900",
         "Node name for S&R": "ImageListToImageBatch",
+        "cnr_id": "comfyui-impact-pack",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -3098,9 +3107,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "ImageFromBatch+",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3194,9 +3204,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
         "Node name for S&R": "GetImageSize+",
+        "cnr_id": "comfyui_essentials",
         "widget_ue_connectable": {}
       },
       "widgets_values": []
@@ -3228,9 +3239,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "was-node-suite-comfyui",
+        "aux_id": "WASasquatch/was-node-suite-comfyui",
         "ver": "1014f8a1477b8ae0144e16ed4fd6476cd109fb23",
         "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3264,9 +3276,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "was-node-suite-comfyui",
+        "aux_id": "WASasquatch/was-node-suite-comfyui",
         "ver": "1014f8a1477b8ae0144e16ed4fd6476cd109fb23",
         "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3425,9 +3438,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "was-node-suite-comfyui",
+        "aux_id": "WASasquatch/was-node-suite-comfyui",
         "ver": "1014f8a1477b8ae0144e16ed4fd6476cd109fb23",
         "Node name for S&R": "Text Concatenate",
+        "cnr_id": "was-node-suite-comfyui",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3462,9 +3476,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "was-node-suite-comfyui",
+        "aux_id": "WASasquatch/was-node-suite-comfyui",
         "ver": "1014f8a1477b8ae0144e16ed4fd6476cd109fb23",
         "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3523,9 +3538,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "was-node-suite-comfyui",
+        "aux_id": "WASasquatch/was-node-suite-comfyui",
         "ver": "1014f8a1477b8ae0144e16ed4fd6476cd109fb23",
         "Node name for S&R": "Text Concatenate",
+        "cnr_id": "was-node-suite-comfyui",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3788,9 +3804,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_controlnet_aux",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux",
         "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
         "Node name for S&R": "LineArtPreprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3831,9 +3848,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_controlnet_aux",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux",
         "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
         "Node name for S&R": "DepthAnythingV2Preprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -3879,9 +3897,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_controlnet_aux",
+        "aux_id": "Fannovel16/comfyui_controlnet_aux",
         "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
         "Node name for S&R": "DWPreprocessor",
+        "cnr_id": "comfyui_controlnet_aux",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -4065,9 +4084,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
         "Node name for S&R": "ImageResizeKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {
           "height": true,
           "width": true
@@ -4149,9 +4169,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
         "Node name for S&R": "ImageResizeKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {
           "width": true,
           "height": true
@@ -4233,9 +4254,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
         "Node name for S&R": "ImageResizeKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {
           "width": true,
           "height": true
@@ -4334,9 +4356,10 @@
       ],
       "title": "ControlNet Video Preview",
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "972c87da577b47211c4e9aeed30dc38c7bae607f",
         "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -4413,9 +4436,10 @@
       ],
       "title": "ControlNet Video Preview",
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "972c87da577b47211c4e9aeed30dc38c7bae607f",
         "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -4476,9 +4500,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "52c2e31a903fec2dd654fb614ea82ba2757d5028",
         "Node name for S&R": "WanVideoTeaCacheKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -4732,10 +4757,10 @@
       ],
       "title": "Upscale Factor",
       "properties": {
-        "cnr_id": "comfyliterals",
+        "aux_id": "M1kep/ComfyLiterals",
         "ver": "bdddb08ca82d90d75d97b1d437a652e0284a32ac",
         "Node name for S&R": "Int",
-        "aux_id": "M1kep/ComfyLiterals",
+        "cnr_id": "comfyliterals",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -4799,9 +4824,10 @@
       ],
       "title": "Select video size",
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "2aa4da0f587f68c1c255b0152ed8f5c334ebe4b4",
         "Node name for S&R": "ImageResizeKJ",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -4854,31 +4880,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 310,
-      "type": "Note",
-      "pos": [
-        -2084.27978515625,
-        -29.76559829711914
-      ],
-      "size": [
-        480.26348876953125,
-        88
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {
-        "widget_ue_connectable": {}
-      },
-      "widgets_values": [
-        "Load your video and select resolutions that matches Wan aspect ratio\nRecommended sizes: 832*480 480*832 512*512 1280*720 720*1280\n\nChange the frame_load_cap in the blue node if you want your reference video to be shorter"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 347,
       "type": "Note",
       "pos": [
@@ -4890,7 +4891,7 @@
         88
       ],
       "flags": {},
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -4960,9 +4961,10 @@
       ],
       "title": "Select ControlNet type",
       "properties": {
-        "cnr_id": "ComfyUI_JPS-Nodes",
+        "aux_id": "JPS-GER/ComfyUI_JPS-Nodes",
         "ver": "0e2a9aca02b17dde91577bfe4b65861df622dcaf",
         "Node name for S&R": "Image Switch (JPS)",
+        "cnr_id": "ComfyUI_JPS-Nodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -5026,9 +5028,10 @@
       "outputs": [],
       "title": "Recommended size for initial frame",
       "properties": {
-        "cnr_id": "rgthree-comfy",
+        "aux_id": "rgthree/rgthree-comfy",
         "ver": "f044a9dbb3fc9de55c6244d616d386986add3072",
         "Node name for S&R": "Display Any (rgthree)",
+        "cnr_id": "rgthree-comfy",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -5071,10 +5074,10 @@
       ],
       "title": "SageAttention",
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "79d9aab5e7f53fcbc5df201eff48e6346cc4154e",
         "Node name for S&R": "PathchSageAttentionKJ",
-        "aux_id": "kijai/ComfyUI-KJNodes",
+        "cnr_id": "comfyui-kjnodes",
         "widget_ue_connectable": {}
       },
       "widgets_values": [
@@ -5095,7 +5098,7 @@
         326
       ],
       "flags": {},
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -5135,10 +5138,10 @@
       ],
       "size": [
         247.455078125,
-        727.9202270507812
+        310
       ],
       "flags": {},
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -5182,9 +5185,10 @@
       ],
       "title": "Upload video here",
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "972c87da577b47211c4e9aeed30dc38c7bae607f",
         "Node name for S&R": "VHS_LoadVideo",
+        "cnr_id": "comfyui-videohelpersuite",
         "widget_ue_connectable": {}
       },
       "widgets_values": {
@@ -5228,7 +5232,7 @@
         200
       ],
       "flags": {},
-      "order": 37,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -5258,6 +5262,29 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 372,
+      "type": "MarkdownNote",
+      "pos": [
+        -2579.906982421875,
+        -29.13623809814453
+      ],
+      "size": [
+        762.6844482421875,
+        88
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "# THIS WORKFLOW IS NO LONGER SUPPORTED, PLEASE USE THE VACE WORKFLOWS"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -7254,10 +7281,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7513148009015777,
+      "scale": 0.6209213230591555,
       "offset": [
-        3596.1786652716796,
-        -33.25651130084596
+        4169.4633579941765,
+        233.71000524665328
       ]
     },
     "groupNodes": {},
@@ -7342,7 +7369,7 @@
         "type": "CLIP"
       }
     ],
-    "VHS_latentpreview": false,
+    "VHS_latentpreview": true,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
@@ -7356,7 +7383,7 @@
       780,
       781
     ],
-    "frontendVersion": "1.17.11"
+    "frontendVersion": "1.23.4"
   },
   "version": 0.4
 }
