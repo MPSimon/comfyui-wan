@@ -78,6 +78,15 @@ else
     git pull
 fi
 
+if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VibeVoice" ]; then
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes
+    git clone https://github.com/wildminder/ComfyUI-VibeVoice.git
+else
+    echo "Updating VibeVoice"
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VibeVoice
+    git pull
+fi
+
 
 echo "🔧 Installing KJNodes packages..."
 pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-KJNodes/requirements.txt &
@@ -86,6 +95,10 @@ KJ_PID=$!
 echo "🔧 Installing WanVideoWrapper packages..."
 pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/requirements.txt &
 WAN_PID=$!
+
+echo "🔧 Installing VibeVoice packages..."
+pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VibeVoice/requirements.txt &
+VIBE_PID=$!
 
 
 export change_preview_method="true"
@@ -411,8 +424,13 @@ wait $KJ_PID
 
 wait $WAN_PID
 WAN_STATUS=$?
+
+wait $VIBE_PID
+VIBE_STATUS=$?
+
 echo "✅ KJNodes install complete"
 echo "✅ WanVideoWrapper install complete"
+echo "✅ VibeVoice install complete"
 
 # Check results
 if [ $KJ_STATUS -ne 0 ]; then
@@ -422,6 +440,11 @@ fi
 
 if [ $WAN_STATUS -ne 0 ]; then
   echo "❌ WanVideoWrapper install failed."
+  exit 1
+fi
+
+if [ $VIBE_STATUS -ne 0 ]; then
+  echo "❌ VibeVoice install failed."
   exit 1
 fi
 
