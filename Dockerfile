@@ -71,6 +71,7 @@ RUN for repo in \
     https://github.com/chrisgoringe/cg-image-picker.git \
     https://github.com/chflame163/ComfyUI_LayerStyle.git \
     https://github.com/chrisgoringe/cg-use-everywhere.git \
+    https://github.com/kijai/ComfyUI-segment-anything-2.git \
     https://github.com/ClownsharkBatwing/RES4LYF \
     https://github.com/welltop-cn/ComfyUI-TeaCache.git \
     https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git \
