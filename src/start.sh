@@ -102,17 +102,6 @@ VIBE_PID=$!
 
 
 export change_preview_method="true"
-echo "Building SageAttention in the background"
-(
-  git clone https://github.com/thu-ml/SageAttention.git
-  cd SageAttention || exit 1
-  python3 setup.py install
-  cd /
-  pip install --no-cache-dir triton
-) &> /var/log/sage_build.log &      # run in background, log output
-
-BUILD_PID=$!
-echo "Background build started (PID: $BUILD_PID)"
 
 
 # Change to the directory
@@ -323,14 +312,6 @@ done
 
 echo "✅ All models downloaded successfully!"
 
-# poll every 5 s until the PID is gone
-  while kill -0 "$BUILD_PID" 2>/dev/null; do
-    echo "🛠️ Building SageAttention in progress... (this can take around 5 minutes)"
-    sleep 10
-  done
-
-  echo "Build complete"
-
 echo "All downloads completed!"
 
 
@@ -469,22 +450,7 @@ done
 
 echo "▶️  Starting ComfyUI"
 
-# Check if sageattention is installed and available
-if python3 -c "import sageattention" 2>/dev/null; then
-    echo "🔧 SageAttention detected - using optimized mode"
-    nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
-else
-    echo "**************************************************************"
-    echo "⚠️  WARNING: SageAttention not available - using standard mode"
-    echo "🐌 This will result in slower video generation performance"
-    echo ""
-    echo "💡 To fix this issue:"
-    echo "   • Deploy using another GPU (Recommended: H100/H200/5090/PRO 6000)"
-    echo "   • Make sure you select CUDA version 12.8 or 12.9"
-    echo "   • Check the additional filters tab before deploying"
-    echo "**************************************************************"
-    nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
-fi
+nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
 
     # Counter for timeout
     counter=0
