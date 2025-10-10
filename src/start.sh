@@ -27,6 +27,20 @@ else
     echo "curl is already installed"
 fi
 
+# Start SageAttention build in the background
+echo "Starting SageAttention build..."
+(
+    export EXT_PARALLEL=4 NVCC_APPEND_FLAGS="--threads 8" MAX_JOBS=32
+    cd /tmp
+    git clone https://github.com/thu-ml/SageAttention.git
+    cd SageAttention
+    git reset --hard 68de379
+    pip install -e .
+    echo "SageAttention build completed" > /tmp/sage_build_done
+) > /tmp/sage_build.log 2>&1 &
+SAGE_PID=$!
+echo "SageAttention build started in background (PID: $SAGE_PID)"
+
 # Set the network volume path
 NETWORK_VOLUME="/workspace"
 URL="http://127.0.0.1:8188"
@@ -243,8 +257,10 @@ download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_C
 download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors" "$LORAS_DIR/Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors"
 download_model "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_animate_14B_relight_lora_bf16.safetensors" "$LORAS_DIR/wan2.2_animate_14B_relight_lora_bf16.safetensors"
 download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors" "$LORAS_DIR/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors"
-download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/high_noise_model.safetensors" "$LORAS_DIR/high_noise_model.safetensors"
-download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/low_noise_model.safetensors" "$LORAS_DIR/low_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/high_noise_model.safetensors" "$LORAS_DIR/t2v_lightx2v_high_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/low_noise_model.safetensors" "$LORAS_DIR/t2v_lightx2v_low_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/high_noise_model.safetensors" "$LORAS_DIR/i2v_lightx2v_high_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/low_noise_model.safetensors" "$LORAS_DIR/i2v_lightx2v_low_noise_model.safetensors"
 
 # Download text encoders
 echo "Downloading text encoders..."
@@ -446,11 +462,31 @@ for file in *.zip; do
     mv "$file" "${file%.zip}.safetensors"
 done
 
+# Wait for SageAttention build to complete
+echo "Waiting for SageAttention build to complete..."
+while ! [ -f /tmp/sage_build_done ]; do
+    if ps -p $SAGE_PID > /dev/null 2>&1; then
+        echo "⚙️  SageAttention build in progress, this may take up to 5 minutes."
+        sleep 5
+    else
+        # Process finished but no completion marker - check if it failed
+        if ! [ -f /tmp/sage_build_done ]; then
+            echo "⚠️  SageAttention build process ended unexpectedly. Check logs at /tmp/sage_build.log"
+            echo "Continuing with ComfyUI startup..."
+            break
+        fi
+    fi
+done
+
+if [ -f /tmp/sage_build_done ]; then
+    echo "✅ SageAttention build completed successfully!"
+fi
+
 # Start ComfyUI
 
 echo "▶️  Starting ComfyUI"
 
-nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
+nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention > "$NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log" 2>&1 &
 
     # Counter for timeout
     counter=0
