@@ -101,6 +101,15 @@ else
     git pull
 fi
 
+if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanAnimatePreprocess" ]; then
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes
+    git clone https://github.com/kijai/ComfyUI-WanAnimatePreprocess.git
+else
+    echo "Updating WanAnimatePreprocess"
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanAnimatePreprocess
+    git pull
+fi
+
 
 echo "🔧 Installing KJNodes packages..."
 pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-KJNodes/requirements.txt &
@@ -113,6 +122,10 @@ WAN_PID=$!
 echo "🔧 Installing VibeVoice packages..."
 pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VibeVoice/requirements.txt &
 VIBE_PID=$!
+
+echo "🔧 Installing WanAnimatePreprocess packages..."
+pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanAnimatePreprocess/requirements.txt &
+WAN_ANIMATE_PID=$!
 
 
 export change_preview_method="true"
@@ -166,6 +179,7 @@ TEXT_ENCODERS_DIR="$NETWORK_VOLUME/ComfyUI/models/text_encoders"
 CLIP_VISION_DIR="$NETWORK_VOLUME/ComfyUI/models/clip_vision"
 VAE_DIR="$NETWORK_VOLUME/ComfyUI/models/vae"
 LORAS_DIR="$NETWORK_VOLUME/ComfyUI/models/loras"
+DETECTION_DIR="$NETWORK_VOLUME/ComfyUI/models/detection"
 
 # Download 480p native models
 if [ "$download_480p_native_models" == "true" ]; then
@@ -259,8 +273,8 @@ download_model "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/reso
 download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors" "$LORAS_DIR/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors"
 download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/high_noise_model.safetensors" "$LORAS_DIR/t2v_lightx2v_high_noise_model.safetensors"
 download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V1.1/low_noise_model.safetensors" "$LORAS_DIR/t2v_lightx2v_low_noise_model.safetensors"
-download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/high_noise_model.safetensors" "$LORAS_DIR/i2v_lightx2v_high_noise_model.safetensors"
-download_model "https://huggingface.co/lightx2v/Wan2.2-Lightning/resolve/main/Wan2.2-I2V-A14B-4steps-lora-rank64-Seko-V1/low_noise_model.safetensors" "$LORAS_DIR/i2v_lightx2v_low_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/resolve/main/wan2.2_i2v_A14b_high_noise_lora_rank64_lightx2v_4step.safetensors" "$LORAS_DIR/i2v_lightx2v_high_noise_model.safetensors"
+download_model "https://huggingface.co/lightx2v/Wan2.2-Distill-Loras/resolve/main/wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step.safetensors" "$LORAS_DIR/i2v_lightx2v_low_noise_model.safetensors"
 
 # Download text encoders
 echo "Downloading text encoders..."
@@ -280,6 +294,13 @@ echo "Downloading VAE..."
 download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors" "$VAE_DIR/Wan2_1_VAE_bf16.safetensors"
 
 download_model "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors" "$VAE_DIR/wan_2.1_vae.safetensors"
+
+# Download detection models for WanAnimatePreprocess
+echo "Downloading detection models..."
+mkdir -p "$DETECTION_DIR"
+download_model "https://huggingface.co/Wan-AI/Wan2.2-Animate-14B/resolve/main/process_checkpoint/det/yolov10m.onnx" "$DETECTION_DIR/yolov10m.onnx"
+download_model "https://huggingface.co/Kijai/vitpose_comfy/resolve/main/onnx/vitpose_h_wholebody_data.bin" "$DETECTION_DIR/vitpose_h_wholebody_data.bin"
+download_model "https://huggingface.co/Kijai/vitpose_comfy/resolve/main/onnx/vitpose_h_wholebody_model.onnx" "$DETECTION_DIR/vitpose_h_wholebody_model.onnx"
 
 # Keep checking until no aria2c processes are running
 while pgrep -x "aria2c" > /dev/null; do
@@ -436,9 +457,13 @@ WAN_STATUS=$?
 wait $VIBE_PID
 VIBE_STATUS=$?
 
+wait $WAN_ANIMATE_PID
+WAN_ANIMATE_STATUS=$?
+
 echo "✅ KJNodes install complete"
 echo "✅ WanVideoWrapper install complete"
 echo "✅ VibeVoice install complete"
+echo "✅ WanAnimatePreprocess install complete"
 
 # Check results
 if [ $KJ_STATUS -ne 0 ]; then
@@ -453,6 +478,11 @@ fi
 
 if [ $VIBE_STATUS -ne 0 ]; then
   echo "❌ VibeVoice install failed."
+  exit 1
+fi
+
+if [ $WAN_ANIMATE_STATUS -ne 0 ]; then
+  echo "❌ WanAnimatePreprocess install failed."
   exit 1
 fi
 
