@@ -971,10 +971,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "aux_id": "kijai/ComfyUI-WanVideoWrapper",
         "ver": "cfdae3b49f10561138f60fb1759c4675c2537d0a",
         "Node name for S&R": "FaceMaskFromPoseKeypoints",
-        "aux_id": "kijai/ComfyUI-WanVideoWrapper",
+        "cnr_id": "ComfyUI-WanVideoWrapper",
         "ue_properties": {
           "widget_ue_connectable": {
             "person_index": true
@@ -2805,53 +2805,6 @@
       ]
     },
     {
-      "id": 314,
-      "type": "LoraLoaderModelOnly",
-      "pos": [
-        -2248.400390625,
-        527.7752685546875
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 693
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            692
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.60",
-        "Node name for S&R": "LoraLoaderModelOnly",
-        "ue_properties": {
-          "version": "7.1",
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "wan2.2_i2v_A14b_low_noise_lora_rank64_lightx2v_4step.safetensors",
-        1
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 227,
       "type": "CLIPTextEncode",
       "pos": [
@@ -2948,7 +2901,7 @@
       ],
       "size": [
         364.03277587890625,
-        944.323486328125
+        334
       ],
       "flags": {},
       "order": 74,
@@ -3042,7 +2995,7 @@
       ],
       "size": [
         364.03277587890625,
-        944.323486328125
+        334
       ],
       "flags": {},
       "order": 79,
@@ -3759,7 +3712,7 @@
         596.621337890625
       ],
       "size": [
-        270,
+        296.4732360839844,
         82
       ],
       "flags": {},
@@ -4030,7 +3983,7 @@
       ],
       "size": [
         252.056640625,
-        736.1005859375
+        310
       ],
       "flags": {},
       "order": 31,
@@ -4127,6 +4080,53 @@
       },
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 314,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -2248.400390625,
+        527.7752685546875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 693
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            692
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "version": "7.1",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "i2v_lightx2v_low_noise_model.safetensors",
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -5217,10 +5217,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6830134553650705,
+      "scale": 0.9090909090909091,
       "offset": [
-        2458.630314415013,
-        100.88713167214772
+        3135.0762319903656,
+        -299.6436189031845
       ]
     },
     "groupNodes": {},
