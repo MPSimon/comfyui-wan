@@ -2153,7 +2153,7 @@
         }
       },
       "widgets_values": [
-        385167958642390,
+        438695614276605,
         "randomize",
         4,
         1,
@@ -2725,12 +2725,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00005_.png&type=temp&subfolder=&rand=0.060192475920932687"
+            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00007_.png&type=temp&subfolder=&rand=0.3471385686036488"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00006_.png&type=temp&subfolder=&rand=0.3937376917414449"
+            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00008_.png&type=temp&subfolder=&rand=0.8422794253545107"
           }
         ]
       ]
@@ -3725,7 +3725,7 @@
         "collapsed": false
       },
       "order": 58,
-      "mode": 0,
+      "mode": 4,
       "inputs": [
         {
           "name": "image",
@@ -5366,10 +5366,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537773,
+      "scale": 0.9090909090909092,
       "offset": [
-        2872.4149169084267,
-        -98.97529634120663
+        1465.7031346561157,
+        287.09354411614044
       ]
     },
     "groupNodes": {},
