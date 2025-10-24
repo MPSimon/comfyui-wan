@@ -2,7 +2,7 @@
   "id": "85bba4ac-7fe8-4694-aa8c-6cd6c9d4423c",
   "revision": 0,
   "last_node_id": 478,
-  "last_link_id": 939,
+  "last_link_id": 940,
   "nodes": [
     {
       "id": 225,
@@ -1611,47 +1611,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 425,
-      "type": "Reroute",
-      "pos": [
-        1270.6990966796875,
-        507.98553466796875
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 865
-        }
-      ],
-      "outputs": [
-        {
-          "name": "AUDIO",
-          "type": "AUDIO",
-          "links": [
-            919
-          ]
-        }
-      ],
-      "title": "Audio",
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false,
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      }
-    },
-    {
       "id": 161,
       "type": "Note",
       "pos": [
@@ -1858,13 +1817,13 @@
           "hidden": false,
           "paused": true,
           "params": {
-            "filename": "AnimateDiff_00001-audio.mp4",
+            "filename": "AnimateDiff_00003-audio.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4",
             "frame_rate": 16,
-            "workflow": "AnimateDiff_00001.png",
-            "fullpath": "/workspace/ComfyUI/output/AnimateDiff_00001-audio.mp4"
+            "workflow": "AnimateDiff_00003.png",
+            "fullpath": "/workspace/ComfyUI/output/AnimateDiff_00003-audio.mp4"
           },
           "muted": false
         }
@@ -1879,7 +1838,7 @@
       ],
       "size": [
         364.03277587890625,
-        334
+        959.6138305664062
       ],
       "flags": {},
       "order": 81,
@@ -1894,7 +1853,7 @@
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
-          "link": null
+          "link": 940
         },
         {
           "name": "meta_batch",
@@ -1951,15 +1910,15 @@
         "save_output": true,
         "videopreview": {
           "hidden": false,
-          "paused": true,
+          "paused": false,
           "params": {
-            "filename": "AnimateDiff_00002.mp4",
+            "filename": "AnimateDiff_00004.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4",
             "frame_rate": 32,
-            "workflow": "AnimateDiff_00002.png",
-            "fullpath": "/workspace/ComfyUI/output/AnimateDiff_00002.mp4"
+            "workflow": "AnimateDiff_00004.png",
+            "fullpath": "/workspace/ComfyUI/output/AnimateDiff_00004.mp4"
           },
           "muted": false
         }
@@ -2194,7 +2153,7 @@
         }
       },
       "widgets_values": [
-        726327019194213,
+        385167958642390,
         "randomize",
         4,
         1,
@@ -2766,12 +2725,12 @@
           {
             "name": "A",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00003_.png&type=temp&subfolder=&rand=0.9138793593325241"
+            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00005_.png&type=temp&subfolder=&rand=0.060192475920932687"
           },
           {
             "name": "B",
             "selected": true,
-            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00004_.png&type=temp&subfolder=&rand=0.6654775024119959"
+            "url": "/api/view?filename=rgthree.compare._temp_xphmh_00006_.png&type=temp&subfolder=&rand=0.3937376917414449"
           }
         ]
       ]
@@ -4206,6 +4165,48 @@
       "bgcolor": "#653"
     },
     {
+      "id": 425,
+      "type": "Reroute",
+      "pos": [
+        1270.6990966796875,
+        507.98553466796875
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 865
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            919,
+            940
+          ]
+        }
+      ],
+      "title": "Audio",
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
       "id": 464,
       "type": "LoraLoaderModelOnly",
       "pos": [
@@ -5285,6 +5286,14 @@
       475,
       0,
       "IMAGE"
+    ],
+    [
+      940,
+      425,
+      0,
+      467,
+      1,
+      "AUDIO"
     ]
   ],
   "groups": [
@@ -5303,7 +5312,7 @@
     },
     {
       "id": 4,
-      "title": "Step 2 - Global Settings (Load reference image and video & Prompt Writing)",
+      "title": "Step 2 - Global Settings (Load reference image and video, configure settings)",
       "bounding": [
         -1470.2213134765625,
         -246.3541259765625,
@@ -5359,8 +5368,8 @@
     "ds": {
       "scale": 0.5644739300537773,
       "offset": [
-        3167.194773145282,
-        307.3394246564507
+        2872.4149169084267,
+        -98.97529634120663
       ]
     },
     "groupNodes": {},
