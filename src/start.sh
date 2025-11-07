@@ -111,6 +111,25 @@ else
 fi
 
 
+if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-FSampler" ]; then
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes
+    git clone https://github.com/obisin/ComfyUI-FSampler.git
+else
+    echo "Updating FSampler"
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-FSampler
+    git pull
+fi
+
+if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanMoEScheduler" ]; then
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes
+    git clone https://github.com/cmeka/ComfyUI-WanMoEScheduler.git
+else
+    echo "Updating WanMoEScheduler"
+    cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-WanMoEScheduler
+    git pull
+fi
+
+
 echo "🔧 Installing KJNodes packages..."
 pip install --no-cache-dir -r $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-KJNodes/requirements.txt &
 KJ_PID=$!
