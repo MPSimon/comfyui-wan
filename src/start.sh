@@ -291,6 +291,13 @@ if [ "$download_wan_animate" == "true" ]; then
   download_model "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_animate_14B_bf16.safetensors" "$DIFFUSION_MODELS_DIR/wan2.2_animate_14B_bf16.safetensors"
 fi
 
+# Download Steady Dancer model
+if [ "$download_steady_dancer" == "true" ]; then
+  echo "Downloading Steady Dancer model..."
+
+  download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/SteadyDancer/Wan21_I2V_SteadyDancer_fp16.safetensors" "$DIFFUSION_MODELS_DIR/Wan21_I2V_SteadyDancer_fp16.safetensors"
+fi
+
 echo "Downloading InfiniteTalk model"
 download_model "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/InfiniteTalk/Wan2_1-InfiniTetalk-Single_fp16.safetensors" "$DIFFUSION_MODELS_DIR/Wan2_1-InfiniTetalk-Single_fp16.safetensors"
 
