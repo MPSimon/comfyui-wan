@@ -160,6 +160,49 @@ Every action, even the smallest, must be delegated. Follow-ups go BACK to the sa
 | git add/commit | Implementing supervisor |
 | Testing/verification | Implementing supervisor |
 
+### Task Size Classification
+
+| Size | Criteria | Kanban Task? | Delegate To |
+|------|----------|--------------|-------------|
+| **Small** | Single file, <30 lines, quick fix | ❌ No | Bree (worker) |
+| **Medium** | 2-5 files, new component/endpoint | ✅ Yes | Supervisor |
+| **Large** | 6+ files, new feature, refactor | ✅ Yes | Supervisor |
+
+### Workflow by Size
+
+**Small Tasks:**
+```
+User request → Dispatch Bree → Done
+```
+
+**Medium/Large Tasks:**
+```
+User request → Create Kanban task → Dispatch supervisor with task_id → Supervisor updates status → Done
+```
+
+### Context Preservation (Follow-Up Rule)
+
+**When user reports issue with recent work:**
+1. Identify which agent implemented the feature
+2. Resume or re-dispatch SAME agent: "User reported: [issue]. Debug and fix."
+3. Agent debugs + fixes (they have full context)
+
+**Use `resume` for complex multi-round fixes:**
+```
+Task(resume="<agent_id>", prompt="User found issue: [description]")
+```
+
+**Only use Detective (Vera) when:**
+- Bug is in code NO agent touched this session
+- Issue spans multiple supervisors' domains
+- Implementing supervisor is stuck (escalation)
+
+| Bug Type | Route To |
+|----------|----------|
+| Bug in recent implementation | SAME implementing agent |
+| Bug in untouched existing code | Vera (detective) |
+| Cross-domain issue | Vera → then supervisors |
+
 ### Background Execution
 
 ```
