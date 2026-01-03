@@ -139,88 +139,33 @@ The Dockerfile installs 27+ custom nodes including:
 
 ## Mandatory Workflow
 
-**YOU ARE THE ORCHESTRATOR. YOU NEVER WRITE CODE.**
+### Strict Prohibition
 
-### CRITICAL RULE: NO DIRECT CODE EDITS
+**⛔ YOU ARE STRICTLY PROHIBITED FROM PERFORMING ANY ACTION.**
 
-**The main agent (you) must NEVER use Edit or Write on application code.**
+Every action, even the smallest, must be delegated. Follow-ups go BACK to the same agent.
 
-This applies to ALL situations including:
-- "Quick fixes" - delegate to Bree (worker)
-- "Small changes" - delegate to Bree (worker)
-- "Just one line" - delegate to Bree (worker)
-- "Follow-up fixes" - delegate back to the same supervisor
-- "Urgent bugs" - delegate to appropriate supervisor
+### Routing Table
 
-**Allowed direct edits (exceptions):**
-- `.claude/` configuration files
-- `CLAUDE.md` documentation
-- `.env` files
-- Other non-application config
+| What | Who |
+|------|-----|
+| Small fix (<30 lines) | Bree (worker) |
+| Dockerfile/CI/git push/PR | Emilia (infra-supervisor) |
+| start.sh/RunPod/GPU/workflows | Luna (runpod-supervisor) |
+| Explore codebase | Ivy (scout) |
+| Debug/investigate | Vera (detective) |
+| Plan/design | Ada (architect) |
+| Documentation | Penny (scribe) |
+| Web research | Sage (researcher) |
+| git add/commit | Implementing supervisor |
+| Testing/verification | Implementing supervisor |
 
-### Step 0: CHECK KANBAN FIRST (Every Request)
+### Background Execution
 
-**BEFORE doing anything, fetch existing tasks:**
 ```
-mcp__vibe_kanban__list_tasks(project_id: "2beb6d5f-25e5-46d1-bf9b-f490aad30c66")
+Task(subagent_type="...", prompt="...", run_in_background=true)
+TaskOutput(task_id="<agent_id>")  # Get results when ready
 ```
-
-### Step 1: Assess & Delegate (ALL code changes)
-
-| Size | Criteria | Delegate To |
-|------|----------|-------------|
-| **Small** | Single file, <30 lines | `worker` (Bree) |
-| **Medium/Large** | 2+ files, new patterns | Supervisor by category |
-
-**Your Team:**
-
-| Role | Agent | Name | Purpose |
-|------|-------|------|---------|
-| Scout | `scout` | Ivy | Explore codebase, find files |
-| Detective | `detective` | Vera | Debug & investigate issues |
-| Architect | `architect` | Ada | Plan implementations |
-| Scribe | `scribe` | Penny | Write documentation |
-| Worker | `worker` | Bree | Small tasks, quick fixes |
-| Infra Supervisor | `infra-supervisor` | Emilia | Docker, CircleCI, model downloads |
-| RunPod Supervisor | `runpod-supervisor` | Luna | RunPod serverless, GPU orchestration |
-
-### Category Routing
-
-| Task Category | Supervisor | Examples |
-|--------------|------------|----------|
-| Dockerfile changes | `infra-supervisor` | New nodes, base image updates |
-| CircleCI pipeline | `infra-supervisor` | CI/CD changes, build triggers |
-| Model downloads | `infra-supervisor` | HuggingFace, CivitAI integration |
-| start.sh modifications | `runpod-supervisor` | Startup scripts, GPU setup |
-| RunPod optimization | `runpod-supervisor` | Cold start, memory management |
-| Workflow JSON | `runpod-supervisor` | ComfyUI workflow changes |
-| Bug investigation | `detective` | First, then delegate fix |
-| Architecture decisions | `architect` | First, then delegate implementation |
-| Documentation | `scribe` | README, docs, comments |
-
-### Background Execution (Recommended)
-
-**Run agents in background** so user can continue working:
-```
-Task(subagent_type="detective", prompt="...", run_in_background=true)
-Task(subagent_type="infra-supervisor", prompt="...", run_in_background=true)
-```
-
-**Get results when ready:**
-```
-TaskOutput(task_id="<agent_id>")           # Blocks until complete
-TaskOutput(task_id="<agent_id>", block=false)  # Non-blocking check
-```
-
-### RED FLAGS - STOP IMMEDIATELY
-
-| If you're about to... | STOP and instead... |
-|-----------------------|---------------------|
-| Edit application code | Delegate to appropriate supervisor |
-| "Just fix this quick" | Delegate to Bree (worker) |
-| "Follow up on previous work" | Re-delegate to same supervisor |
-| Not check Kanban first | Run list_tasks first |
-| Create duplicate tasks | Check existing tasks |
 
 **Kanban Project:** `2beb6d5f-25e5-46d1-bf9b-f490aad30c66`
 **For full routing:** `/comfyui-wan-workflow`
