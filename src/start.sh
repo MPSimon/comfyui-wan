@@ -69,7 +69,7 @@ else
 fi
 
 echo "Downloading CivitAI download script to /usr/local/bin"
-git clone "https://github.com/Hearmeman24/CivitAI_Downloader.git" || { echo "Git clone failed"; exit 1; }
+git clone "https://github.com/MPSimon/CivitAI_Downloader.git" || { echo "Git clone failed"; exit 1; }
 mv CivitAI_Downloader/download_with_aria.py "/usr/local/bin/" || { echo "Move failed"; exit 1; }
 chmod +x "/usr/local/bin/download_with_aria.py" || { echo "Chmod failed"; exit 1; }
 rm -rf CivitAI_Downloader  # Clean up the cloned repo
@@ -583,7 +583,7 @@ nohup python3 "$NETWORK_VOLUME/ComfyUI/main.py" --listen --use-sage-attention > 
             echo "3. If you are using a B200 GPU, it is currently not supported"
             echo "4. If all else fails, open the web terminal by clicking \"connect\", \"enable web terminal\" and running:"
             echo "   cat comfyui_${RUNPOD_POD_ID}_nohup.log"
-            echo "   This should show a ComfyUI error. Please paste the error in HearmemanAI Discord Server for assistance."
+            echo "   This should show a ComfyUI error."
             echo ""
             echo "📋 Startup logs location: $NETWORK_VOLUME/comfyui_${RUNPOD_POD_ID}_nohup.log"
             break

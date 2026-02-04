@@ -99,6 +99,8 @@ RUN for repo in \
 
 COPY src/start_script.sh /start_script.sh
 RUN chmod +x /start_script.sh
+COPY src/download_assets.sh /usr/local/bin/download
+RUN chmod +x /usr/local/bin/download
 COPY 4xLSDIR.pth /4xLSDIR.pth
 
 CMD ["/start_script.sh"]
