@@ -102,5 +102,6 @@ RUN chmod +x /start_script.sh
 COPY src/download_assets.sh /usr/local/bin/download
 RUN chmod +x /usr/local/bin/download
 COPY 4xLSDIR.pth /4xLSDIR.pth
+COPY . /comfyui-wan
 
 CMD ["/start_script.sh"]
