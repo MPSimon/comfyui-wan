@@ -138,7 +138,17 @@ if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VAE-Utils" ]; then
 else
     echo "Updating VAE Utils"
     cd $NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-VAE-Utils
-    git pull
+    git fetch --prune origin
+    DEFAULT_BRANCH=$(git remote show origin 2>/dev/null | awk '/HEAD branch/ {print $NF}')
+    if [ -z "$DEFAULT_BRANCH" ]; then
+        if git show-ref --verify --quiet refs/remotes/origin/main; then
+            DEFAULT_BRANCH="main"
+        else
+            DEFAULT_BRANCH="master"
+        fi
+    fi
+    git reset --hard "origin/${DEFAULT_BRANCH}"
+    git clean -fd
 fi
 
 if [ ! -d "$NETWORK_VOLUME/ComfyUI/custom_nodes/ComfyUI-Wan22FMLF" ]; then
