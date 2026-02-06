@@ -45,12 +45,4 @@ if ! patch_net_sh; then
   echo "Warning: could not patch ComfyWizard downloader to use ARTIFACT_AUTH." >&2
 fi
 
-if ! command -v jq >/dev/null 2>&1; then
-  echo "Installing jq..."
-  apt-get update && apt-get install -y jq || {
-    echo "jq is required but could not be installed." >&2
-    exit 1
-  }
-fi
-
 bash "$DEST/bin/wizard.sh"
